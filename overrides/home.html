@@ -1,0 +1,485 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+{{ super() }}
+
+<!-- Additional styles for landing page -->
+<!-- Based on https://github.com/binbashar/le-ref-architecture-doc -->
+<!-- MIT license Copyright (c) 2020 Binbashar Inc -->
+<!-- github button -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<style>
+
+    .md-header {
+        position: initial
+    }
+
+    .md-main__inner {
+        margin: 0
+    }
+
+    .md-footer-copyright {
+        display: none
+    }
+
+    .md-footer-nav__inner {
+        display: none
+    }
+
+    .md-content {
+        display: none
+    }
+
+    .md-footer-meta__inner {
+        align-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    /*
+     Table of content font color
+    */
+    a.md-nav__link {
+        color: #303C55;
+        text-decoration: none;
+    }
+
+    .tx-container {
+        --md-primary-fg-color: #0a192f;
+        height: fit-content;
+        padding-top: 0rem;
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: white' /></svg>") no-repeat bottom, linear-gradient(167deg, #009485 40%,  var(--md-primary-fg-color), #fff 99%)
+    }
+
+    .tx-hero {
+        color: var(--md-primary-bg-color);
+        justify-content: center;
+        margin: 32px 2.5rem;
+    }
+
+    .tx-hero h1 {
+        margin-bottom: 0rem;
+        color: currentColor;
+        font-weight: 700
+    }
+
+    .tx-hero__content {
+        padding-bottom: 6rem;
+        margin: 0 auto;
+        /* justify-content: left;
+        padding-right: 3rem; */
+    }
+
+    .tx-hero__content h1 {
+        font-size: 2.5rem;
+    }
+
+    .tx-hero__content_small {
+        justify-content: left;
+        padding-right: 3rem;
+    }
+
+    .tx-hero__image {
+        max-width: 100%;
+        max-height: 100%;
+        order: 1;
+        padding-right: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .tx-hero .md-button {
+        margin-top: .5rem;
+        margin-right: .5rem;
+        color: var(--md-primary-bg-color)
+    }
+
+    .tx-hero .md-button--primary {
+        background-color: var(--md-primary-bg-color);
+        color: hsla(280deg, 37%, 48%, 1);
+        border-color: var(--md-primary-bg-color)
+    }
+
+    .tx-hero .md-button:focus,
+    .tx-hero .md-button:hover {
+        background-color: var(--md-accent-fg-color);
+        color: var(--md-default-bg-color);
+        border-color: var(--md-accent-fg-color)
+    }
+
+    .tx-container-2 {
+        padding: 0rem;
+        background-color: white;
+        margin-bottom: 0px;
+    }
+
+    .tx-hero__image-2 {
+        max-width: 100%;
+        max-height: 100%;
+        order: 1;
+        padding-right: 0.5rem;
+        padding-left: 0rem;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        float: left;
+    }
+
+    .tx-hero__content-2 {
+        margin-left: 50px;
+        justify-content: left;
+        color: #009485;
+        font-weight: 300;
+        padding: 0 0px;
+        padding-bottom: 40px;
+        word-break: break-word;
+        float: right;
+    }
+
+    .tx-hero__content-2 h1 {
+        margin-top: 50px;
+        color: #009485;
+        font-weight: 600;
+        /* font-size: 36px; */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: normal;
+        /*font-family: inherit;*/
+    }
+
+    .tx-hero__content-2 p {
+        font-size: 17px;
+        line-height: 1.8em;
+        text-rendering: optimizeLegibility;
+        color: black;
+        display: block;
+    }
+
+    .tx-hero__content-2 a:link {
+        color: #009485;
+    }
+
+    .tx-hero__content-2 a:visited {
+        color: #2a978d;
+    }
+
+    .tx-container-3 {
+        --md-primary-fg-color: #0a192f;
+        height: auto;
+        background: linear-gradient(to bottom, var(--md-primary-fg-color), #02162f 100%, #fff 99%);
+    }
+
+    .tx-container-4 {
+        height: auto;
+        background: linear-gradient(to bottom, #02162f 99%, #009485, #fff 99%);
+    }
+
+    .tx-container-testimonial {
+        height: auto;
+        background: #EDEFF0;
+    }
+
+    .tx-hero__image-3 {
+        max-width: 100%;
+        max-height: 100%;
+        order: 1;
+        padding-right: 2.5rem;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .tx-hero__image-4 {
+        max-width: 100%;
+        max-height: 100%;
+        order: 1;
+        padding-right: 2.5rem;
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+
+    .tx-footer {
+        margin: 0px 0rem;
+        background-color: white;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tx-hero__content-footer {
+        justify-content: left;
+        color: #2a978d;
+        font-weight: 300;
+        padding: 0 0px;
+        word-break: break-word;
+        float: left;
+    }
+
+    .tx-footer p {
+        font-size: 12px;
+        line-height: 1.8em;
+        text-rendering: optimizeLegibility;
+        color: black;
+        display: block;
+        font-family: inherit;
+    }
+
+    /**/
+    /*Adjusting Mobile UI */
+    /**/
+    @media screen and (max-width: 30em) {
+        .tx-hero h1 {
+            font-size: 1.4rem
+        }
+
+        .tx-hero__content {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .tx-hero__content_small {
+            margin-bottom: 50px;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 1.1rem;
+        }
+
+        .tx-hero__content-2 {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .tx-hero__content-3 {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .md-typeset .md-button {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (min-width: 60em) {
+        .md-sidebar--secondary {
+            display: none
+        }
+
+        .tx-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tx-hero__content {
+            max-width: 28rem;
+            margin-top: 3.5rem;
+            margin-bottom: 3.5rem;
+            margin-left: 1.0rem;
+            margin-right: 4.0rem;
+            align-items: center;
+        }
+    }
+
+    @media screen and (min-width: 76.25em) {
+        .md-sidebar--primary {
+            display: none
+        }
+
+        .top-hr {
+            width: 100%;
+            display: flex;
+            max-width: 61rem;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 .2rem;
+        }
+
+        .bottom-hr {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            max-width: 61rem;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 .2rem;
+        }
+    }
+
+    .text-center {
+        text-align: center;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15px;
+        font-size: 23px;
+        font-weight: 300;
+        padding-bottom: 10px;
+    }
+
+    .logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+        margin: 0 auto;
+    }
+
+    .logos img {
+        flex: 1 1 auto;
+        padding: 25px;
+        max-height: 130px;
+        vertical-align: middle;
+    }
+</style>
+
+
+<!-- Hero for landing page -->
+<!-- 1st Section -->
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+
+            <!-- Hero image -->
+            <div class="tx-hero__image">
+                <img
+                        src="assets/images/logo.svg"
+                        alt=""
+                        width="480"
+                        draggable="false"
+                >
+            </div>
+
+            <!-- Hero content -->
+            <div class="tx-hero__content">
+                <h1  id="pdearena">PDEArena</h1>
+                <p>
+                    A modern, scalable, and easy to use PDE Surrogate Benchmarking Framework. <br><br>
+
+                    <!-- Based on the
+                    <strong>
+                        <a href="https://www.pytorchlightning.ai/">
+                            PyTorch Lightning Framework
+                        </a>.
+                    </strong> -->
+                </p><br>
+
+                <a
+                href="{{ page.next_page.url | url }}"
+                title="{{ page.next_page.title | e }}"
+                class="md-button md-button--primary"
+                >
+                Get started
+                </a><br>
+
+                <a
+                href="https://github.com/microsoft/pdearena"
+                title="{{ lang.t('source.link.title') }}"
+                class="md-button">
+                Contribute on GitHub
+                <img
+                    class = icon
+                    src="assets/images/icons/github-white.svg"
+                    alt=""
+                    width="24"
+                    draggable="false"
+                >
+                </a>
+                <br>
+
+                <a
+                href="./research"
+                title="{{ lang.t('source.link.title') }}"
+                class="md-button md-button--primary">
+                Research
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M20,11H4V8H20M20,15H13V13H20M20,19H13V17H20M11,19H4V13H11M20.33,4.67L18.67,3L17,4.67L15.33,3L13.67,4.67L12,3L10.33,4.67L8.67,3L7,4.67L5.33,3L3.67,4.67L2,3V19A2,2 0 0,0 4,21H20A2,2 0 0,0 22,19V3L20.33,4.67Z" />
+                </svg>
+                </a><br>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2nd Section -->
+<!-- What is PDEArena -->
+<section class="tx-container-2">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero__image-2" style="margin-top: 50px">
+            <object data="assets/images/home-section-2.svg" type="image/svg+xml">
+            <img
+                    src="assets/images/home-section-2.png"
+                    alt=""
+                    width="600"
+                    draggable="false"
+                    align="left"
+            >
+            </object>
+        </div>
+        <div class="tx-hero">
+            <!-- Hero content -->
+            <div class="tx-hero__content-2">
+                <h1 id="what-is-pdearena">What is PDEArena?</h1><br>
+
+                <p>
+                    An easy-to-use, scalable framework for PDE Surrogate learning:<br>
+                    ▶️
+                    <strong>
+                        Simple and flexible codebase
+                    </strong><br>
+                    ▶️
+                    <strong>
+                        Rapid implementation and evaluation of research ideas
+                    </strong><br>
+                    ▶️
+                    <strong>
+                        Large collection of <a href="https://arxiv.org/abs/2209.15616">baseline results</a> and <a href="./architectures/">associated implementations</a>
+                    </strong><br>
+                    ▶️
+                    <strong>
+                        Supports efficient scalable distributed training, powered by <a href="https://www.pytorchlightning.ai/">PyTorch Lightning</a>
+                    </strong><br>
+
+                    <br>
+
+
+                </p><br>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- Citation -->
+<section class="tx-container-2">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+            <!-- Hero content -->
+            <div class="tx-hero__content-2">
+
+            <h1 id="citation">Citation</h1>
+            <p>If you find this repository useful in your work, please cite:</p>
+            <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">@article</span><span class="p">{</span><span class="nl">gupta2022towards</span><span class="p">,</span><span class="w"></span>
+            <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{Towards Multi-spatiotemporal-scale Generalized PDE Modeling}</span><span class="p">,</span><span class="w"></span>
+            <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Gupta, Jayesh K and Brandstetter, Johannes}</span><span class="p">,</span><span class="w"></span>
+            <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="na">journal</span><span class="p">=</span><span class="s">{arXiv preprint arXiv:2209.15616}</span><span class="p">,</span><span class="w"></span>
+            <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2022}</span><span class="w"></span>
+            <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span><span class="w"></span>
+            </code></pre></div>
+
+            <p>Also consider starring <a href="https://github.com/microsoft/pdearena">the github repo</a>.
+                <a class="github-button" href="https://github.com/microsoft/pdearena" data-icon="octicon-star" data-show-count="true" aria-label="Star microsoft/pdearena on GitHub">Star</a>         </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
+<!-- Footer Section -->
+{% block footer %}{% endblock %}

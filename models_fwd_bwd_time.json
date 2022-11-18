@@ -1,0 +1,148 @@
+{
+    "DilResNet-128": {
+        "fwd_bwd_time": 0.3418540748395026,
+        "peak_gpu_memory": 4849.01
+    },
+    "DilResNet-128-norm": {
+        "fwd_bwd_time": 0.42274740517139436,
+        "peak_gpu_memory": 6921.0
+    },
+    "FNO-128-16m": {
+        "fwd_bwd_time": 0.17162225043401122,
+        "peak_gpu_memory": 2950.0
+    },
+    "FNO-128-8m": {
+        "fwd_bwd_time": 0.16116908844560385,
+        "peak_gpu_memory": 2160.5
+    },
+    "FNOs-128-16m": {
+        "fwd_bwd_time": 0.08949717976152897,
+        "peak_gpu_memory": 1850.95
+    },
+    "FNOs-128-32m": {
+        "fwd_bwd_time": 0.11801787681877612,
+        "peak_gpu_memory": 3416.53
+    },
+    "FNOs-64-32m": {
+        "fwd_bwd_time": 0.04992721544578672,
+        "peak_gpu_memory": 1204.57
+    },
+    "FNOs-96-32m": {
+        "fwd_bwd_time": 0.08020957417786122,
+        "peak_gpu_memory": 2179.0
+    },
+    "ResNet-128": {
+        "fwd_bwd_time": 0.09328817203640938,
+        "peak_gpu_memory": 2491.01
+    },
+    "ResNet-256": {
+        "fwd_bwd_time": 0.26075149470940234,
+        "peak_gpu_memory": 4941.51
+    },
+    "U-FNet1-16m": {
+        "fwd_bwd_time": 0.19582175109535455,
+        "peak_gpu_memory": 4034.6
+    },
+    "U-FNet1-16m-1x1": {
+        "fwd_bwd_time": 0.19469593396410345,
+        "peak_gpu_memory": 4037.58
+    },
+    "U-FNet1-8m": {
+        "fwd_bwd_time": 0.19466598223894835,
+        "peak_gpu_memory": 3934.09
+    },
+    "U-FNet1-8m-1x1": {
+        "fwd_bwd_time": 0.19364842854440212,
+        "peak_gpu_memory": 3936.99
+    },
+    "U-FNet2-16m": {
+        "fwd_bwd_time": 0.2001223522424698,
+        "peak_gpu_memory": 4146.64
+    },
+    "U-FNet2-16m-1x1": {
+        "fwd_bwd_time": 0.19910074155777693,
+        "peak_gpu_memory": 4150.08
+    },
+    "U-FNet2-16mc": {
+        "fwd_bwd_time": 0.20418253606185316,
+        "peak_gpu_memory": 4493.39
+    },
+    "U-FNet2-8m": {
+        "fwd_bwd_time": 0.19785596176981926,
+        "peak_gpu_memory": 3961.9
+    },
+    "U-FNet2-8m-1x1": {
+        "fwd_bwd_time": 0.1967023863270879,
+        "peak_gpu_memory": 3961.2
+    },
+    "U-FNet2-8mc": {
+        "fwd_bwd_time": 0.19882417757064105,
+        "peak_gpu_memory": 4046.27
+    },
+    "U-FNet2attn-16m": {
+        "fwd_bwd_time": 0.2063879201374948,
+        "peak_gpu_memory": 4228.26
+    },
+    "U-FNet2attn-16m-1x1": {
+        "fwd_bwd_time": 0.20534367483109237,
+        "peak_gpu_memory": 4224.25
+    },
+    "U-FNet3-16m": {
+        "fwd_bwd_time": 0.20268796106800438,
+        "peak_gpu_memory": 4246.78
+    },
+    "U-FNet3-16m-1x1": {
+        "fwd_bwd_time": 0.20131026020273565,
+        "peak_gpu_memory": 4249.58
+    },
+    "U-FNet3-8m": {
+        "fwd_bwd_time": 0.20051911290735006,
+        "peak_gpu_memory": 4059.5
+    },
+    "U-FNet3-8m-1x1": {
+        "fwd_bwd_time": 0.19957014331594108,
+        "peak_gpu_memory": 4060.67
+    },
+    "UNO-128": {
+        "fwd_bwd_time": 0.3411878024972975,
+        "peak_gpu_memory": 5511.0
+    },
+    "UNO-64": {
+        "fwd_bwd_time": 0.13399360865354537,
+        "peak_gpu_memory": 1931.67
+    },
+    "Unet2015-128": {
+        "fwd_bwd_time": 0.1174440573528409,
+        "peak_gpu_memory": 3001.0
+    },
+    "Unet2015-64": {
+        "fwd_bwd_time": 0.03732586469501257,
+        "peak_gpu_memory": 1303.97
+    },
+    "Unetbase-128": {
+        "fwd_bwd_time": 0.1339645767584443,
+        "peak_gpu_memory": 2999.0
+    },
+    "Unetbase-64": {
+        "fwd_bwd_time": 0.04646623531356454,
+        "peak_gpu_memory": 1276.35
+    },
+    "Unetmod-64": {
+        "fwd_bwd_time": 0.1856086727231741,
+        "peak_gpu_memory": 3904.68
+    },
+    "Unetmod-64-1x1": {
+        "fwd_bwd_time": 0.18486317057162524,
+        "peak_gpu_memory": 3907.24
+    },
+    "Unetmodattn-64": {
+        "fwd_bwd_time": 0.19219611460343003,
+        "peak_gpu_memory": 3980.78
+    },
+    "Unetmodattn-64-1x1": {
+        "fwd_bwd_time": 0.19140359913930297,
+        "peak_gpu_memory": 3976.78
+    },
+    "date-created": "2022-11-12 19:01:07.366819",
+    "gpu-name": "Tesla V100-PCIE-16GB"
+}

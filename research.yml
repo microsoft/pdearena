@@ -1,0 +1,30 @@
+papers:
+  - title: Towards Multi-spatiotemporal-scale Generalized PDE Modeling
+    authors:
+      - Jayesh K. Gupta (1)
+      - Johannes Brandstetter (2)
+
+    affiliations:
+      1: Microsoft Autonomous Systems and Robotics Research
+      2: Microsoft Research AI4Science
+
+    link: https://arxiv.org/abs/2209.15616
+    abstract: Partial differential equations (PDEs) are central to describing complex physical system simulations. Their expensive solution techniques have led to an increased interest in deep neural network based surrogates. However, the practical utility of training such surrogates is contingent on their ability to model complex multi-scale spatio-temporal phenomena. Various neural network architectures have been proposed to target such phenomena, most notably Fourier Neural Operators (FNOs), which give a natural handle over local & global spatial information via parameterization of different Fourier modes, and U-Nets which treat local and global information via downsampling and upsampling paths. However, generalizing across different equation parameters or time-scales still remains a challenge. In this work, we make a comprehensive comparison between various FNO, ResNet, and U-Net like approaches to fluid mechanics problems in both vorticity-stream and velocity function form. For U-Nets, we transfer recent architectural improvements from computer vision, most notably from object segmentation and generative modeling. We further analyze the design considerations for using FNO layers to improve performance of U-Net architectures without major degradation of computational cost. Finally, we show promising results on generalization to different PDE parameters and time-scales with a single surrogate model.
+    date: 2022-09-30
+    image: unet-results.png
+
+  - title: Clifford Neural Layers for PDE Modeling
+    authors:
+      - Johannes Brandstetter (1)
+      - Rianne van den Berg (1)
+      - Max Welling (1)
+      - Jayesh K. Gupta (2)
+
+    affiliations:
+      1: Microsoft Research AI4Science
+      2: Microsoft Autonomous Systems and Robotics Research
+
+    link: https://arxiv.org/abs/2209.04934
+    abstract: Partial differential equations (PDEs) see widespread use in sciences and engineering to describe simulation of physical processes as scalar and vector fields interacting and coevolving over time. Due to the computationally expensive nature of their standard solution methods, neural PDE surrogates have become an active research topic to accelerate these simulations. However, current methods do not explicitly take into account the relationship between different fields and their internal components, which are often correlated. Viewing the time evolution of such correlated fields through the lens of multivector fields allows us to overcome these limitations. Multivector fields consist of scalar, vector, as well as higher-order components, such as bivectors and trivectors. Their algebraic properties, such as multiplication, addition and other arithmetic operations can be described by Clifford algebras. To our knowledge, this paper presents the first usage of such multivector representations together with Clifford convolutions and Clifford Fourier transforms in the context of deep learning. The resulting Clifford neural layers are universally applicable and will find direct use in the areas of fluid dynamics, weather forecasting, and the modeling of physical systems in general. We empirically evaluate the benefit of Clifford neural layers by replacing convolution and Fourier operations in common neural PDE surrogates by their Clifford counterparts on two-dimensional Navier-Stokes and weather modeling tasks, as well as three-dimensional Maxwell equations. Clifford neural layers consistently improve generalization capabilities of the tested neural PDE surrogates.
+    date: 2022-09-08
+    image: clifford-fno.png
