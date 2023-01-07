@@ -124,8 +124,8 @@ class PDEModel(LightningModule):
             self.log("train/vector_loss", vector_loss)
             return {
                 "loss": loss,
-                "scalar_loss": scalar_loss,
-                "vector_loss": vector_loss,
+                "scalar_loss": scalar_loss.detach(),
+                "vector_loss": vector_loss.detach(),
             }
         elif self._mode == "3D":
             raise NotImplementedError(f"{self._mode}")

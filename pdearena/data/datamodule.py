@@ -43,7 +43,7 @@ def collate_fn_stack(batch):
 class PDEDataModule(LightningDataModule):
     """Defines the standard dataloading process for PDE data.
 
-    Does not support generaliztion to different parameterizations or time.
+    Does not support generalization to different parameterizations or time.
     Consider using [pdearena.data.cond_datamodule.CondPDEDataModule][] for that.
 
     Args:
